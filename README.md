@@ -1,4 +1,5 @@
 # Frontend Mentor - Product preview card component
+# Live demo: https://product-preview-frontend-challenge.netlify.app/
 
 ![Design preview for the Product preview card component coding challenge](./design/desktop-preview.jpg)
 
