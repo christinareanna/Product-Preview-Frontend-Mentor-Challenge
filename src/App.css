@@ -1,38 +1,247 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(30, 38%, 92%);
+}
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Desktop View */
+@media screen and (min-width: 768px) {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .card {
+    display: none;
+  }
+
+  .desktop-card {
+    width: 750px;
+    height: auto;
+    padding-top: 10em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image {
+    height: 550px;
+    width: 450px;
+
+  }
+
+  .image img {
+    width: 500px;
+    max-width: 100%;
+    border-top-left-radius: 3%;
+    border-bottom-left-radius: 3%;
+    height: 550px;
+  }
+
+  .desktop-card-body {
+    width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: white;
+    height: 550px;
+    padding: 0 1.3em;
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%;
+  }
+
+  .desktop-card-body h1 {
+    font-family: 'Fraunces', serif;
+    width: 250px;
+    font-size: 2.3em;
+    padding: 0.6em 0.4em;
+  }
+
+  .desktop-card-body h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 5px;
+    font-size: 16px;
+    padding-top: 3em;
+    padding-left: 1.1em;
+  }
+
+  .desktop-card-body p {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.4em 0.8em;
+    width: 320px;
+    font-size: 18px;
+    line-height: 25px;
+    color: hsl(228, 12%, 48%);
+  }
+
+  .desktop-price-details {
+    display: flex;
+  }
+
+  .desktop-price-details h1 {
+    color: hsl(158, 36%, 37%);
+    width: 50%;
+  }
+
+  .desktop-price-details h5 {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    padding: 2.2em 2em;
+    font-size: 1em;
+  }
+
+  .desktop-button {
+    margin: 0.3em 0.4em;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  button {
+    background-color: hsl(158, 36%, 37%);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    width: 300px;
+    height: 60px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 1px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .attribution {
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* Mobile View */
 
-.App-link {
-  color: #61dafb;
-}
+@media screen and (min-width: 300px) and (max-width: 768px) {
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .desktop-card {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding-top: 3em;
+  }
+
+  .card {
+    width: 360px;
+    height: 640px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 2%;
+  }
+
+  .card img {
+    width: 360px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border-top-right-radius: 3%;
+    border-top-left-radius: 3%;
+  }
+
+  .card-body {
+    padding: 0 0.3em;
+  }
+
+  .card h1,
+  h4 {
+    text-align: left;
+  }
+
+  .card h1 {
+    font-family: 'Fraunces', serif;
+    width: 300px;
+    padding-left: 0.7em;
+  }
+
+  .card h4 {
+    padding: 1.4em 2em;
+    padding-bottom: 0.7em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 48%);
+  }
+
+  .card p {
+    width: 350px;
+    font-size: 15px;
+    padding: 1em 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    line-height: 25px;
+  }
+
+  .price-details {
+    display: flex;
+  }
+
+  .price-details h1 {
+    color: hsl(158, 36%, 37%);
+    width: 50%;
+  }
+
+  .price-details h5 {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    padding: 1em 0;
+  }
+
+  .button-container {
+    padding: 1em 0;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  button {
+    background-color: hsl(158, 36%, 37%);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 1px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
   }
 }
